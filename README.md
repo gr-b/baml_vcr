@@ -1,6 +1,8 @@
-# BAML VCR (Video Cassette Recorder)
+# BAML VCR
 
-A recording and playback system for BAML (Basic Agent Management Language) function calls, inspired by the VCR pattern in testing. BAML VCR allows you to capture LLM interactions during test runs and replay them without making actual API calls, making your tests faster, more reliable, and cost-effective.
+A recording and playback system for BAML function calls, inspired by the VCR pattern in testing. BAML VCR allows you to capture LLM interactions during test runs and replay them without making actual API calls, making your tests faster, more reliable, and cost-effective.
+
+Source: [https://github.com/BoundaryML/baml/tree/canary](https://github.com/BoundaryML/baml/tree/canary)
 
 ## Features
 
@@ -14,8 +16,18 @@ A recording and playback system for BAML (Basic Agent Management Language) funct
 
 ## Installation
 
+BAML VCR is not yet available on PyPI. To install, clone the repository and install from source:
+
 ```bash
-pip install baml_vcr
+git clone https://github.com/gr-b/baml_vcr.git
+cd baml_vcr
+pip install -e .
+```
+
+Or install directly from GitHub:
+
+```bash
+pip install git+https://github.com/gr-b/baml_vcr.git
 ```
 
 ## Quick Start
@@ -159,7 +171,7 @@ BAML VCR preserves type information during serialization. If you encounter type 
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+Contributions are welcome! Please feel free to submit a Pull Request. If it does not break existing functionality, I will merge it.
 
 ## License
 
