@@ -11,7 +11,7 @@ class TestMyBAMLFunctions:
     def test_simple_function(self):
         # First run: makes real LLM call and saves to cassette
         result = b.MyBAMLFunction(arg1="value1", arg2="value2")
-        assert result.success
+        assert result.value == 100
         
         # Subsequent runs: loads from cassette without LLM call
 ```
