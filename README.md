@@ -6,7 +6,8 @@ import baml_client
 from baml_client import b
 
 class TestMyBAMLFunctions:
-    @baml_vcr.use_cassette()
+
+    @baml_vcr.use_cassette() # <--- All you need
     def test_simple_function(self):
         # First run: makes real LLM call and saves to cassette
         result = b.MyBAMLFunction(arg1="value1", arg2="value2")
