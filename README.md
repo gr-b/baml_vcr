@@ -16,9 +16,9 @@ class TestMyBAMLFunctions:
         # Subsequent runs: loads from cassette without LLM call
 ```
 
-A recording and playback system for BAML function calls, inspired by the VCR pattern in testing. BAML VCR allows you to capture LLM interactions during test runs and replay them without making actual API calls, making your tests faster, more reliable, and cost-effective.
+A recording and playback system for BAML function calls, inspired by the VCR.py. BAML VCR allows you to capture LLM interactions during test runs and replay them without making actual API calls, making your tests faster and cost-effective, and giving you the flexibility to choose which parts of an LLM pipeline to test vs cache in any given run.
 
-Source: [https://github.com/BoundaryML/baml/tree/canary](https://github.com/BoundaryML/baml/tree/canary)
+Source: [https://github.com/BoundaryML/baml/tree/canary](https://github.com/BoundaryML/baml)
 
 ## Features
 
