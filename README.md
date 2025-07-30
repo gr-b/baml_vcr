@@ -1,4 +1,19 @@
-# BAML VCR
+# BAML VCR - Cache LLM calls in tests in 1 line
+
+```python
+from baml_vcr import baml_vcr
+import baml_client
+from baml_client import b
+
+class TestMyBAMLFunctions:
+    @baml_vcr.use_cassette()
+    def test_simple_function(self):
+        # First run: makes real LLM call and saves to cassette
+        result = b.MyBAMLFunction(arg1="value1", arg2="value2")
+        assert result.success
+        
+        # Subsequent runs: loads from cassette without LLM call
+```
 
 A recording and playback system for BAML function calls, inspired by the VCR pattern in testing. BAML VCR allows you to capture LLM interactions during test runs and replay them without making actual API calls, making your tests faster, more reliable, and cost-effective.
 
@@ -30,22 +45,7 @@ Or install directly from GitHub:
 pip install git+https://github.com/gr-b/baml_vcr.git
 ```
 
-## Quick Start
 
-```python
-from baml_vcr import baml_vcr
-import baml_client
-from baml_client import b
-
-class TestMyBAMLFunctions:
-    @baml_vcr.use_cassette()
-    def test_simple_function(self):
-        # First run: makes real LLM call and saves to cassette
-        result = b.MyBAMLFunction(arg1="value1", arg2="value2")
-        assert result.success
-        
-        # Subsequent runs: loads from cassette without LLM call
-```
 
 ## Recording Modes
 
